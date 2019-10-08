@@ -267,7 +267,7 @@ open class VideoPlayerView: UIView {
     }
 
     private func updateControlToolbar(videoEnded: Bool) {
-        let playPauseButton: UIBarButtonItem.SystemItem = player.timeControlStatus == .paused || videoEnded ? .play : .pause;
+        let playPauseButton: UIBarButtonItem.SystemItem = (player.timeControlStatus == .paused || videoEnded) ? .play : .pause;
 
         controlToolbar.items = [
             UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil),

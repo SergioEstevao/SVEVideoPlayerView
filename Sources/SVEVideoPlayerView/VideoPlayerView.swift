@@ -78,6 +78,7 @@ open class VideoPlayerView: UIView {
         })
 
         accessibilityIgnoresInvertColors = true
+        clipsToBounds = true
     }
 
     deinit {

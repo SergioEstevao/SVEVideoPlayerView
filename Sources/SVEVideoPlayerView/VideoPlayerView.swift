@@ -42,6 +42,7 @@ open class VideoPlayerView: UIView {
 
     convenience public init(videoURL: URL) {
         self.init(frame: .zero)
+        commonInit()
         self.videoURL = videoURL
         self.asset = AVURLAsset(url: videoURL)
         setupPlayerItem()
@@ -49,7 +50,6 @@ open class VideoPlayerView: UIView {
             let size = track.naturalSize.applying(track.preferredTransform)
             frame = CGRect(origin: .zero, size: size)
         }
-        commonInit()
     }
 
     open override var intrinsicContentSize: CGSize {

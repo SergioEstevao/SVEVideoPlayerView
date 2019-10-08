@@ -79,6 +79,7 @@ open class VideoPlayerView: UIView {
 
         accessibilityIgnoresInvertColors = true
         clipsToBounds = true
+        self.updateControlToolbar()
     }
 
     deinit {

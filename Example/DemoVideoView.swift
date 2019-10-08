@@ -7,8 +7,8 @@ struct DemoVideoView: View {
     @State var showsPlaybackControls: Bool = false
 
     var body: some View {
-        VStack(alignment: .center, spacing: 10) {
-            Video(url: $videoURL, loop: $loop, showsPlaybackControls: $showsPlaybackControls)
+        VStack() {
+            Video(url: videoURL, loop: loop, showsPlaybackControls: showsPlaybackControls)
             Divider()
             Button(action: { () in self.showsPlaybackControls.toggle() }) {
                 Text("Toggle Controls")

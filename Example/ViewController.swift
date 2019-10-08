@@ -8,6 +8,7 @@
 
 import UIKit
 import SVEVideoPlayerView
+import SwiftUI
 
 class ViewController: UIViewController, VideoPlayerViewDelegate {
 
@@ -25,24 +26,46 @@ class ViewController: UIViewController, VideoPlayerViewDelegate {
         print("Finish\n")
     }
 
+    lazy var videoView: VideoPlayerView = {
+        let url = Bundle.main.url(forResource: videos.first, withExtension: "mp4")!
+       let videoView = VideoPlayerView(videoURL: url)
+       videoView.autoPlay = true       
+       videoView.backgroundColor = .black
+       videoView.showsPlaybackControls = true
+       videoView.center = view.center
+       videoView.delegate = self
+       return videoView
+    }()
+
+    lazy var swiftButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("SwiftUI", for: .normal)
+        button.sizeToFit()
+        button.addTarget(self, action: #selector(showSwiftUI), for: .touchUpInside)
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let url = Bundle.main.url(forResource: videos.first, withExtension: "mp4")!
-        let videoView = VideoPlayerView(videoURL: url)
-        videoView.autoPlay = true
         view.addSubview(videoView)
-        videoView.play()
-        videoView.backgroundColor = .black
-        videoView.showsPlaybackControls = true
-        videoView.center = view.center
         videoView.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor).isActive = true
         videoView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
         videoView.translatesAutoresizingMaskIntoConstraints = false
-        videoView.delegate = self
+
+        // Button to connect to SwiftUI
+        view.addSubview(swiftButton)
+        swiftButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10).isActive = true
+        swiftButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        swiftButton.translatesAutoresizingMaskIntoConstraints = false
     }
 
+    @objc func showSwiftUI() {
+        let videoView = DemoVideoView()
+        let controller = UIHostingController(rootView: videoView)        
+        self.videoView.pause()
+        present(controller, animated: true, completion: nil)
+    }
 
 }
 

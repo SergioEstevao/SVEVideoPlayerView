@@ -38,7 +38,7 @@ open class VideoPlayerView: UIView {
     static let tracksKey = "tracks"
     static let timeFormatString = "%@ / %@"
     static let toolbarHeight: CGFloat = 44
-    static var playerItemContext = "ItemStatusContext"
+    var playerItemContext = "ItemStatusContext"
 
     convenience public init(videoURL: URL) {
         self.init(frame: .zero)

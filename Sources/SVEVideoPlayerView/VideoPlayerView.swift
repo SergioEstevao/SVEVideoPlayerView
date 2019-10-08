@@ -96,7 +96,7 @@ open class VideoPlayerView: UIView {
     private func addObservers() {
         playerItem?.addObserver(self, forKeyPath: "status",
                                options: [.new, .old],
-                               context:&Self.playerItemContext)
+                               context:&playerItemContext)
         NotificationCenter.default.addObserver(self,
                                                selector:#selector(playerItemDidReachEnd),
                                                name:.AVPlayerItemDidPlayToEndTime,
@@ -295,7 +295,7 @@ open class VideoPlayerView: UIView {
     override open func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
 
         // Only handle observations for the playerItemContext
-        guard context == &(Self.playerItemContext), keyPath == "status" else {
+        guard context == &(playerItemContext), keyPath == "status" else {
             super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
             return;
         }

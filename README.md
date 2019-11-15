@@ -68,10 +68,6 @@ To run the example project, clone the repo, and open the `SVEVideoPlayerView.xcp
  * XCode 11 or above
  * iOS 11 or above
 
-## Contributing
-
-Read our [Contributing Guide](CONTRIBUTING.md) to learn about reporting issues, contributing code, and more ways to contribute.
-
 ## Getting in Touch
 
 If you have questions about getting setup or just want to say hi, just drop an issue on Github with your request.
@@ -82,4 +78,4 @@ If you have questions about getting setup or just want to say hi, just drop an i
 
 ## License
 
-SVEViewPlayerView is available under the MIT license. See the [LICENSE file](./LICENSE) for more info.
+SVEVideoPlayerView is available under the MIT license. See the [LICENSE file](./LICENSE.md) for more info.

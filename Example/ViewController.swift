@@ -35,15 +35,7 @@ class ViewController: UIViewController, VideoPlayerViewDelegate {
        videoView.center = view.center
        videoView.delegate = self
        return videoView
-    }()
-
-    lazy var swiftButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("SwiftUI", for: .normal)
-        button.sizeToFit()
-        button.addTarget(self, action: #selector(showSwiftUI), for: .touchUpInside)
-        return button
-    }()
+    }()    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,19 +44,6 @@ class ViewController: UIViewController, VideoPlayerViewDelegate {
         videoView.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor).isActive = true
         videoView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
         videoView.translatesAutoresizingMaskIntoConstraints = false
-
-        // Button to connect to SwiftUI
-        view.addSubview(swiftButton)
-        swiftButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10).isActive = true
-        swiftButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-        swiftButton.translatesAutoresizingMaskIntoConstraints = false
-    }
-
-    @objc func showSwiftUI() {
-        let videoView = DemoVideoView()
-        let controller = UIHostingController(rootView: videoView)        
-        self.videoView.pause()
-        present(controller, animated: true, completion: nil)
     }
 
 }

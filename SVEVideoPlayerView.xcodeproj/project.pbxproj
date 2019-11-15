@@ -29,8 +29,6 @@
 		FF068EF7234AA1E7005C6720 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF068EF5234AA1E7005C6720 /* LaunchScreen.storyboard */; };
 		FF068EFD234AA20A005C6720 /* SVEVideoPlayerView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SVEVideoPlayerView::SVEVideoPlayerView::Product" /* SVEVideoPlayerView.framework */; };
 		FF068EFF234AA276005C6720 /* test-video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FF068EFE234AA276005C6720 /* test-video.mp4 */; };
-		FF7EAEB3234C8FB8007A26E0 /* DemoVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7EAEB2234C8FB8007A26E0 /* DemoVideoView.swift */; };
-		FF7EAEB6234CA2F9007A26E0 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7EAEB4234CA2A6007A26E0 /* Video.swift */; };
 		OBJ_25 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* VideoPlayerView.swift */; };
 		OBJ_32 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_43 /* VideoPlayerViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* VideoPlayerViewTests.swift */; };
@@ -65,9 +63,7 @@
 		FF068EF6234AA1E7005C6720 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF068EF8234AA1E7005C6720 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF068EFE234AA276005C6720 /* test-video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "test-video.mp4"; sourceTree = "<group>"; };
-		FF068F00234B408C005C6720 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
-		FF7EAEB2234C8FB8007A26E0 /* DemoVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoVideoView.swift; sourceTree = "<group>"; };
-		FF7EAEB4234CA2A6007A26E0 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		FF0B25A3237C712C004E255F /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		OBJ_12 /* VideoPlayerViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewTests.swift; sourceTree = "<group>"; };
 		OBJ_13 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_19 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -115,7 +111,6 @@
 				FF068EF3234AA1E7005C6720 /* Assets.xcassets */,
 				FF068EF5234AA1E7005C6720 /* LaunchScreen.storyboard */,
 				FF068EF8234AA1E7005C6720 /* Info.plist */,
-				FF7EAEB2234C8FB8007A26E0 /* DemoVideoView.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -164,7 +159,7 @@
 				FF068EE9234AA1E7005C6720 /* Example */,
 				OBJ_14 /* Products */,
 				OBJ_19 /* README.md */,
-				FF068F00234B408C005C6720 /* LICENSE.md */,
+				FF0B25A3237C712C004E255F /* LICENSE.md */,
 				FF068EFC234AA20A005C6720 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -181,7 +176,6 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_9 /* VideoPlayerView.swift */,
-				FF7EAEB4234CA2A6007A26E0 /* Video.swift */,
 			);
 			name = SVEVideoPlayerView;
 			path = Sources/SVEVideoPlayerView;
@@ -311,7 +305,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF7EAEB3234C8FB8007A26E0 /* DemoVideoView.swift in Sources */,
 				FF068EEF234AA1E7005C6720 /* ViewController.swift in Sources */,
 				FF068EEB234AA1E7005C6720 /* AppDelegate.swift in Sources */,
 				FF068EED234AA1E7005C6720 /* SceneDelegate.swift in Sources */,
@@ -322,7 +315,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				FF7EAEB6234CA2F9007A26E0 /* Video.swift in Sources */,
 				OBJ_25 /* VideoPlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
